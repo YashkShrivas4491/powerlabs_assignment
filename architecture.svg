@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="820" viewBox="0 0 1400 820" role="img" aria-labelledby="title desc">
+  <title id="title">Airbnb Listing UI Architecture</title>
+  <desc id="desc">Architecture diagram showing the React application, data, hooks, UI components, CSS, and Vite build flow.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#fff7f8"/>
+      <stop offset="1" stop-color="#f4f7ff"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="140%">
+      <feDropShadow dx="0" dy="8" stdDeviation="10" flood-color="#1f2937" flood-opacity=".12"/>
+    </filter>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+      <path d="M0 0 L10 5 L0 10 Z" fill="#657084"/>
+    </marker>
+    <style>
+      .title { font: 700 30px Arial, sans-serif; fill: #172033; }
+      .subtitle { font: 400 15px Arial, sans-serif; fill: #657084; }
+      .heading { font: 700 18px Arial, sans-serif; fill: #172033; }
+      .label { font: 600 15px Arial, sans-serif; fill: #172033; }
+      .small { font: 400 13px Arial, sans-serif; fill: #657084; }
+      .box { stroke: #d8dee9; stroke-width: 1.5; rx: 16; filter: url(#shadow); }
+      .line { stroke: #657084; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    </style>
+  </defs>
+  <rect width="1400" height="820" fill="url(#bg)"/>
+  <text x="70" y="65" class="title">Airbnb Listing UI Architecture</text>
+  <text x="70" y="94" class="subtitle">React + Vite single-page application with componentized UI, local state, and static listing data</text>
+
+  <rect x="70" y="145" width="260" height="150" class="box" fill="#ffffff"/>
+  <text x="100" y="185" class="heading">Browser</text>
+  <text x="100" y="218" class="label">Airbnb listing experience</text>
+  <text x="100" y="246" class="small">Gallery, booking, reviews</text>
+  <text x="100" y="268" class="small">Amenities, host, map, carousel</text>
+
+  <rect x="410" y="125" width="300" height="190" class="box" fill="#ffe7eb"/>
+  <text x="445" y="165" class="heading">React application</text>
+  <text x="445" y="202" class="label">src/App.jsx</text>
+  <text x="445" y="230" class="small">Page composition</text>
+  <text x="445" y="253" class="small">Interaction state and callbacks</text>
+  <text x="445" y="276" class="small">Toast feedback and flow control</text>
+
+  <rect x="790" y="105" width="260" height="130" class="box" fill="#e8f5ee"/>
+  <text x="825" y="145" class="heading">Data layer</text>
+  <text x="825" y="180" class="label">src/data/listingData.js</text>
+  <text x="825" y="207" class="small">Gallery, amenities, ratings</text>
+  <text x="825" y="228" class="small">Reviews and nearby stays</text>
+
+  <rect x="790" y="275" width="260" height="130" class="box" fill="#e9f1ff"/>
+  <text x="825" y="315" class="heading">Shared behavior</text>
+  <text x="825" y="350" class="label">src/hooks/useToast.js</text>
+  <text x="825" y="377" class="small">Reusable notification state</text>
+
+  <rect x="410" y="390" width="640" height="220" class="box" fill="#fff"/>
+  <text x="445" y="430" class="heading">Reusable UI components</text>
+  <text x="445" y="470" class="label">Header</text>
+  <text x="445" y="496" class="label">GallerySection</text>
+  <text x="445" y="522" class="label">BookingCard</text>
+  <text x="445" y="548" class="label">PhotoModal</text>
+  <text x="700" y="470" class="label">HostSection</text>
+  <text x="700" y="496" class="label">Ratings and testimonials</text>
+  <text x="700" y="522" class="label">Amenities and nearby stays</text>
+  <text x="700" y="548" class="label">Map controls</text>
+
+  <rect x="70" y="410" width="260" height="150" class="box" fill="#fff4df"/>
+  <text x="100" y="450" class="heading">Styling</text>
+  <text x="100" y="485" class="label">src/App.css</text>
+  <text x="100" y="512" class="small">Component styles</text>
+  <text x="100" y="535" class="small">Responsive breakpoints</text>
+
+  <rect x="410" y="680" width="300" height="90" class="box" fill="#f0ecff"/>
+  <text x="445" y="720" class="heading">Vite build</text>
+  <text x="445" y="747" class="small">npm run build -> dist/</text>
+
+  <rect x="790" y="680" width="260" height="90" class="box" fill="#e9f7f7"/>
+  <text x="825" y="720" class="heading">Deployment</text>
+  <text x="825" y="747" class="small">GitHub -> Vercel</text>
+
+  <path d="M330 220 H400" class="line"/>
+  <path d="M710 190 H780" class="line"/>
+  <path d="M710 260 H780" class="line"/>
+  <path d="M560 325 V380" class="line"/>
+  <path d="M790 235 V270" class="line"/>
+  <path d="M410 485 H340" class="line"/>
+  <path d="M560 615 V670" class="line"/>
+  <path d="M710 725 H780" class="line"/>
+  <path d="M950 610 V670" class="line"/>
+</svg>
